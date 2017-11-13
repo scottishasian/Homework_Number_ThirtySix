@@ -16,15 +16,17 @@ public class WordCounter {
         return new Integer(result).toString();
     }
 
-    public Map<String, Integer> wordOccurences(String phrase) {
+    public String wordOccurences(String phrase) {         // method adapted from stackoverflow.
         String[] words = phrase.split(" ");
         Map<String, Integer> occurences = new HashMap();
         for(String word : words) {
-            if(!occurences.containsKey(word))
-                occurences.put(word, 1);
-            else
-                occurences.put(word, occurences.get(word) + 1);
+            if(!occurences.containsKey(word)) {        //If contained word not in occurences put 1, else add 1.
+                occurences.put(word.toLowerCase(), 1);
+            }else {
+                occurences.put(word.toLowerCase(), occurences.get(word) + 1);
+            }
         }
-        return occurences;
+        //        return "Here is a list of word occurences: " + occurences;
+        return "Here is a list of word occurences: \n\n" + occurences;
     }
 }
