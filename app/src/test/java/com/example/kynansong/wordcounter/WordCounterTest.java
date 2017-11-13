@@ -24,7 +24,7 @@ public class WordCounterTest {
 
     @Test
     public void testCanCountWords () {
-        int result = this.sentence.wordCount("I am a teapot");
-        assertEquals(4, result);
+        String result = this.sentence.wordCount("I am a teapot");
+        assertEquals("4", result);
     }
 }

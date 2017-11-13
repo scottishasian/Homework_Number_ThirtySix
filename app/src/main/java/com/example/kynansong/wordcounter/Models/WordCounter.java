@@ -8,8 +8,9 @@ import java.lang.reflect.Array;
 
 public class WordCounter {
 
-    public int wordCount(String phrase) {
+    public String wordCount(String phrase) {
         String[] sentence = phrase.split(" ");
-        return sentence.length;
+        int result = sentence.length;
+        return new Integer(result).toString();
     }
 }

@@ -3,6 +3,7 @@ package com.example.kynansong.wordcounter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
         this.wordCounter = new WordCounter();
 
         Log.d("MainActivity", "OnCreate called");
+    }
+
+    public void onButtonClick(View button) {
+        Log.d(getClass().toString(),"Button Clicked");
+        String sentence = this.sentence.getText().toString();
+        Log.d(getClass().toString(), sentence);
+        this.counter.setText(this.wordCounter.wordCount(sentence).toString());
+
     }
 
 
