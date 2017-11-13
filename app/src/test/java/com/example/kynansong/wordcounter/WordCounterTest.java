@@ -1,9 +1,13 @@
 package com.example.kynansong.wordcounter;
 
+import com.example.kynansong.wordcounter.Models.WordCounter;
+
+
 import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNotNull;
 
 /**
  * Created by kynansong on 13/11/2017.
@@ -11,11 +15,16 @@ import static junit.framework.Assert.assertEquals;
 
 public class WordCounterTest {
 
-    @Before
+    WordCounter sentence;
 
+    @Before
+    public void before() {
+        this.sentence = new WordCounter();
+    }
 
     @Test
-    public void (){
-        assertEquals();
+    public void testCanCountWords () {
+        int result = this.sentence.wordCount("I am a teapot");
+        assertEquals(4, result);
     }
 }
