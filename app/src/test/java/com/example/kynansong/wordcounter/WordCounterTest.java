@@ -23,8 +23,13 @@ public class WordCounterTest {
     }
 
     @Test
-    public void testCanCountWords () {
+    public void testCanCountWords() {
         String result = this.sentence.wordCount("I am a teapot");
         assertEquals("4", result);
     }
+
+//    @Test
+//    public void testWordOccurences() {
+//        String result = this.sentence.wordOccurences("I am a fat fat cat");
+//    }
 }

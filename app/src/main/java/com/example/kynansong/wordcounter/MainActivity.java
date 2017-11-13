@@ -13,6 +13,7 @@ import com.example.kynansong.wordcounter.Models.WordCounter;
 public class MainActivity extends AppCompatActivity {
 
     private TextView counter;
+    private TextView occurences;
     private EditText sentence;
     private Button submitButton;
     private WordCounter wordCounter;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.counter = (TextView) findViewById(R.id.word_count);
+        this.occurences = (TextView) findViewById(R.id.occurences_count);
         this.sentence = (EditText) findViewById(R.id.sentence_input);
         this.submitButton = (Button) findViewById(R.id.submit_button);
         this.wordCounter = new WordCounter();
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         String sentence = this.sentence.getText().toString();
         Log.d(getClass().toString(), sentence);
         this.counter.setText(this.wordCounter.wordCount(sentence).toString());
+        this.occurences.setText(this.wordCounter.wordOccurences(sentence).toString());
 
     }
 
