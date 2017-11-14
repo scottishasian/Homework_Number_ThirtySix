@@ -15,7 +15,7 @@ import static junit.framework.Assert.assertNotNull;
 
 public class WordCounterTest {
 
-    WordCounter sentence;
+    WordCounter sentence;           //By making methods static, this call is not required.
 
     @Before
     public void before() {

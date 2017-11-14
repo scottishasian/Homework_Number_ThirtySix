@@ -8,7 +8,7 @@ import java.util.Map;
  * Created by kynansong on 13/11/2017.
  */
 
-public class WordCounter {
+public class WordCounter {              //should make methods static so they don't need to be instantiated.
 
     public String wordCount(String phrase) {
         String[] sentence = phrase.split(" ");
@@ -17,16 +17,20 @@ public class WordCounter {
     }
 
     public String wordOccurences(String phrase) {         // method adapted from stackoverflow.
-        String[] words = phrase.split(" ");
+        String[] words = phrase.split(" ");// can put .toLowercase() method here, before .split.
+        String output = "Total Words: \n";
         Map<String, Integer> occurences = new HashMap();
-        for(String word : words) {
-            if(!occurences.containsKey(word)) {        //If contained word not in occurences put 1, else add 1.
+        for (String word : words) {
+            if (!occurences.containsKey(word)) {        //If contained word not in occurences put 1, else add 1.
                 occurences.put(word.toLowerCase(), 1);
-            }else {
+            } else {
                 occurences.put(word.toLowerCase(), occurences.get(word) + 1);
             }
         }
-        //        return "Here is a list of word occurences: " + occurences;
-        return "Here is a list of word occurences: \n\n" + occurences;
+//        return "Here is a list of word occurences: \n\n" + occurences;
+        for(String key: occurences.keySet()) {
+        output += key + " : " + occurences.get(key) + "\n";         // counts the keys then set out as string.
+        }
+        return output;
     }
 }
