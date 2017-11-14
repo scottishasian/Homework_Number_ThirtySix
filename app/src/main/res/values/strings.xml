@@ -15,4 +15,5 @@
     <string name="about_header">About this App</string>
     <string name="info_box">This app is designed to count the amount of words in a phrase as well as occurences of those words.</string>
     <string name="made_by">This was made by this guy:</string>
+    <string name="coming_soon">Feature coming soon...</string>
 </resources>
