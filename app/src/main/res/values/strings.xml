@@ -9,7 +9,10 @@
     <string name="example_text">word:number</string>
     <string name="occurences">word:count</string>
     <string name="about">About</string>
-    <string name="settings">String</string>
+    <string name="settings">Settings</string>
     <string name="about_activity_title">About</string>
     <string name="settings_activity_title">Settings</string>
+    <string name="about_header">About this App</string>
+    <string name="info_box">This app is designed to count the amount of words in a phrase as well as occurences of those words.</string>
+    <string name="made_by">This was made by this guy:</string>
 </resources>
