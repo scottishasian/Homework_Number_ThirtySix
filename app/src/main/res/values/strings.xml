@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">WordCounter</string>
     <string name="wordcount">0</string>
-    <string name="input_sentence">I am a fish</string>
+    <string name="input_sentence">Write a sentence here</string>
     <string name="submit">submit</string>
     <string name="wordCountHeader">Your word count is:</string>
     <string name="occurence_header">These words appear this many times:</string>

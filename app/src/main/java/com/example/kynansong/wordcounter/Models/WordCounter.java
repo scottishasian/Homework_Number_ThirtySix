@@ -17,14 +17,14 @@ public class WordCounter {              //should make methods static so they don
     }
 
     public String wordOccurences(String phrase) {         // method adapted from stackoverflow.
-        String[] words = phrase.split(" ");// can put .toLowercase() method here, before .split.
+        String[] words = phrase.toLowerCase().split(" ");// can put .toLowercase() method here, before .split.
         String output = "Total Words: \n";
         Map<String, Integer> occurences = new HashMap();
         for (String word : words) {
             if (!occurences.containsKey(word)) {        //If contained word not in occurences put 1, else add 1.
-                occurences.put(word.toLowerCase(), 1);
+                occurences.put(word, 1);
             } else {
-                occurences.put(word.toLowerCase(), occurences.get(word) + 1);
+                occurences.put(word, occurences.get(word) + 1);
             }
         }
 //        return "Here is a list of word occurences: \n\n" + occurences;

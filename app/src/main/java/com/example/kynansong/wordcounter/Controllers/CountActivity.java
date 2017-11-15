@@ -25,6 +25,6 @@ public class CountActivity extends AppCompatActivity {
         TextView occurenceTextView = findViewById(R.id.occurences_count);
 
         countTextView.setText(wordCount);
-        occurenceTextView.setText(occurenceCount);
+        occurenceTextView.setText(occurenceCount); //Always pass strings to set text.
     }
 }
