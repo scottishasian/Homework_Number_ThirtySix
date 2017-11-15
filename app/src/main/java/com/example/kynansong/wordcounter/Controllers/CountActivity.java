@@ -19,9 +19,12 @@ public class CountActivity extends AppCompatActivity {
         Bundle extras = intent.getExtras();   // get extra information, and pull it back from the hash map of intent.
 
         String wordCount = extras.getString("count");
+        String occurenceCount = extras.getString("occurence");
 
-        TextView answerTextView = findViewById(R.id.word_count);
+        TextView countTextView = findViewById(R.id.word_count);
+        TextView occurenceTextView = findViewById(R.id.occurences_count);
 
-        answerTextView.setText(wordCount);
+        countTextView.setText(wordCount);
+        occurenceTextView.setText(occurenceCount);
     }
 }

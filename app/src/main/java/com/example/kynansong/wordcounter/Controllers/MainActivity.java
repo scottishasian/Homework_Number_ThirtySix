@@ -50,8 +50,10 @@ public class MainActivity extends AppCompatActivity {
         String sentence = this.sentence.getText().toString();
 
         String counting = wordCounter.wordCount(sentence);
+        String occurences = wordCounter.wordOccurences(sentence);
 
         intent.putExtra("count", counting);
+        intent.putExtra("occurence", occurences);
 
         startActivity(intent);
 
