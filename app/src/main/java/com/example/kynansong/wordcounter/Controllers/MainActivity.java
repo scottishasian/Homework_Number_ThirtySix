@@ -38,11 +38,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonClick(View button) {
-        Log.d(getClass().toString(),"Button Clicked");
+//        Log.d(getClass().toString(),"Button Clicked");
+//        String sentence = this.sentence.getText().toString();
+//        Log.d(getClass().toString(), sentence);
+//        this.counter.setText(this.wordCounter.wordCount(sentence).toString());
+//        this.occurences.setText(this.wordCounter.wordOccurences(sentence).toString());
+        Intent intent = new Intent(this, CountActivity.class);
+
+        WordCounter wordCounter = new WordCounter();
+
         String sentence = this.sentence.getText().toString();
-        Log.d(getClass().toString(), sentence);
-        this.counter.setText(this.wordCounter.wordCount(sentence).toString());
-        this.occurences.setText(this.wordCounter.wordOccurences(sentence).toString());
+
+        String counting = wordCounter.wordCount(sentence);
+
+        intent.putExtra("count", counting);
+
+        startActivity(intent);
+
 
     }
 
